@@ -1,5 +1,4 @@
 #include<stdexcept>
-
 #include <iostream>
 template <typename T>
 
@@ -20,6 +19,8 @@ private:
     size_type capacity_;
 
 public:
+
+
     Vector() : size_{0}, capacity_{0}, Data_{nullptr} {}
     Vector(size_type s, value_type val)
     {
@@ -55,10 +56,12 @@ public:
         vec.size_ = 0;
         vec.capacity_ = 0;
     }
+
     ~Vector()
     {
         delete[] Data_;
     }
+
     iterator begin()
     {
         return Data_;
@@ -83,6 +86,7 @@ public:
     {
         return size_;
     }
+
     reference operator[](size_type a)
     {
         if (a > size_ or a < 0)
@@ -95,6 +99,7 @@ public:
             throw std::out_of_range{"const ref operator []"};
         return Data_[i];
     }
+
     Vector<value_type>& operator=(Vector&& v)
     {
         if (&v == this)
@@ -108,6 +113,7 @@ public:
         v.size_ = 0;
         return *this;
     }
+
     Vector<value_type>& operator=(const Vector& v)
     {
         if (&v == this)
