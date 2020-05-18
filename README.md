@@ -4,15 +4,13 @@ Vector container
 
 # Funkcijos
 
-iterator erase(iterator pointer)
+    iterator erase(iterator pointer)
     {
         size_type del;
         for (size_type i = 0; i < size_; ++i)
         {
             if (&Data_[i] == pointer)
                 del = i;
-
-
         }
         for (size_type i = del; i < size_; i++)
         {
@@ -78,7 +76,7 @@ Erase funkcija, kuri istrina nari i kuri yra paduodamas **pointer**, o tada pers
     
 Resize funkcija perkopijuoja senus **Vector** narius i nauja kitokio dydzio **Vector** ir po to priskiria juos prie seno **Vector** pointeriu bei istrina sena **Vector**
 
-iterator erase(iterator pointer)
+    iterator erase(iterator pointer)
     {
         size_type del;
         for (size_type i = 0; i < size_; ++i)
@@ -99,7 +97,7 @@ iterator erase(iterator pointer)
     
 Iterator erase funkcija istrina nari i kuri yra paduodamas pointeris , o tada perstumia visus tolimesnius narius viena vieta atgal
 
-void reserve(size_type rcapacity)
+    void reserve(size_type rcapacity)
     {
         if (capacity_ < rcapacity)
         {
@@ -118,9 +116,8 @@ void reserve(size_type rcapacity)
     
 Reserve funkcija isskiria vietos atmintyje sukurdama reikiamo dydzio objekta. Tuomet perkopijuojamos senos reiksmes ir jos istrinamos, po to naujas masyvas prisikiriamas senam pointeriui
 
-void push_back(const_reference value)
+    void push_back(const_reference value)
     {
-
         if (capacity_ == 0)
         {
             capacity_++;
@@ -138,7 +135,7 @@ void push_back(const_reference value)
     
 Push_back funkcija ideda paduota reiksme i **Vector** gala ir padidina jo dydi vienu.
 
-void shrink_to_fit()
+    void shrink_to_fit()
     {
         if (capacity_ > size_)
         {
