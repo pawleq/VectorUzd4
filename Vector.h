@@ -210,8 +210,6 @@ public:
             if (&Data_[i] == end - 1)
             {
                 en = i;
-
-
             }
 
         }
