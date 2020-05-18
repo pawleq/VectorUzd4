@@ -6,7 +6,6 @@ template <typename T>
 class Vector
 {
 public:
-
     typedef T&& rvalue;
     typedef T value_type;
     typedef T& reference;
@@ -15,15 +14,12 @@ public:
     typedef T* pointer;
     typedef T* iterator;
     typedef const T* const_iterator;
-
 private:
-
     pointer Data_;
     size_type size_;
     size_type capacity_;
 
 public:
-
     Vector() : size_{0}, capacity_{0}, Data_{nullptr} {}
     Vector(size_type s, value_type val)
     {
@@ -209,7 +205,6 @@ public:
             {
                 en = i;
             }
-
         }
         if (en > size_)
             throw std::out_of_range("out of range erasing");
