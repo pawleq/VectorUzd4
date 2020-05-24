@@ -171,8 +171,17 @@ Capacity count
 | Kontaineris | Talpa | capacity()==size() kartai |
 |--|--|--|
 | std::vector | 1000000 | 21 |
-| vector | 100000 | 21 |
+| vector | 1000000 | 21 |
 | std::vector | 10000000 | 25 |
-| vector | 1000000 | 25 |
+| vector | 10000000 | 25 |
 | std::vector | 100000000 | 28 |
-| vector | 10000000 | 28 |
+| vector | 100000000 | 28 |
+
+Studentai
+
+| Kontaineris | Talpa | Laikas |
+|--|--|--|
+| std::vector | 100000 |  0.175206 s |
+| vector | 100000 | 0.172372 s |
+| std::vector | 1000000 |  1.45573 s |
+| vector | 1000000 | 1.4077 s |
